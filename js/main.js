@@ -1,11 +1,11 @@
 
 let tasksList = document.querySelector('.tasks');
 
-
-
 window.addEventListener('load', setUsernameFromLocalStorage());
 document.getElementById('todo-form').addEventListener('submit', handleFormSubmission);
-document.querySelector('.username').addEventListener('keypress', handleKeyPress);
+ document.querySelector('.user').addEventListener('keypress', handleKeyPress);
+
+
 
 
 
@@ -14,6 +14,8 @@ function handleFormSubmission(event) {
     const selectedRadioButton = document.querySelector('input[name="category-option"]:checked');
     const taskInput = document.querySelector('input[name="task"]');
     const taskDescription = taskInput.value.trim();
+    
+    
 
     if(!taskDescription) {
         alert('Please enter a task description.')
@@ -26,7 +28,10 @@ function handleFormSubmission(event) {
     }
 
     const todoInfoDiv = createTaskElement(selectedRadioButton, taskDescription);
+    taskInput.value = '';
+
 }
+
 
 
 function createTaskElement(selectedRadioButton, taskDescription) {

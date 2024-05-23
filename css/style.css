@@ -124,7 +124,7 @@ input[class="business"]:checked:after {
     border: 2px solid rgb(141, 160, 224);
 }
 
-.grey-txt {
+.blur-txt {
     font-weight: bold;
     color: #808080;
     margin: 7px 0;
