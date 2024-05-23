@@ -15,7 +15,7 @@ main {
     min-width: 400px;
 }
 
-form {
+#todo-form {
     width: 100%;
     min-width: 400px;
 }
@@ -130,30 +130,31 @@ input[class="business"]:checked:after {
     margin: 7px 0;
 }
 
-.greeting {
+.todo-title {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.heading, .username {
+.todo-text, .user{
     font-size: 35px;
+    font-weight: 600;
 }
 
-.heading {
-    min-width: 11rem;
-}
 
-.username {
+
+.user{
     border: none; 
     outline: none;
-    background-color: rgb(231, 231, 231);
+    background-color: whitesmoke;
     max-width: 15rem;
     max-height: 3rem;
 }
 
-.uppercase {
+.task-title {
     margin: 7px 0;
+    font-weight: 700;
+    
 }
 
 .tasks {
@@ -181,7 +182,7 @@ input[class="business"]:checked:after {
 }
 
 
-.task__text {
+.task-text {
     margin-left: 0.5rem;
     outline: 0px solid transparent; 
 }

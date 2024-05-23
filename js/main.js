@@ -1,14 +1,14 @@
-//Variables and constants
-var tasksList = document.querySelector('.tasks');
+
+let tasksList = document.querySelector('.tasks');
 
 
-//Key listeners
+
 window.addEventListener('load', setUsernameFromLocalStorage());
-document.getElementById('todoForm').addEventListener('submit', handleFormSubmission);
+document.getElementById('todo-form').addEventListener('submit', handleFormSubmission);
 document.querySelector('.username').addEventListener('keypress', handleKeyPress);
 
 
-//Functions
+
 function handleFormSubmission(event) {
     event.preventDefault();
     const selectedRadioButton = document.querySelector('input[name="category-option"]:checked');
@@ -39,7 +39,7 @@ function createTaskElement(selectedRadioButton, taskDescription) {
         <div class="task">
             <div class="task-description">
                 <input class="${checkboxColorClassName}" type="checkbox" name="checkbox" onchange="strikeTask(this)">
-                <p class="task__text">${taskDescription}</p>
+                <p class="task-text">${taskDescription}</p>
             </div>
             <div class="btns">
                 <button class="edit-task" onclick="editTask(this)">Edit</button>
@@ -53,7 +53,7 @@ function createTaskElement(selectedRadioButton, taskDescription) {
 
 function strikeTask(checkbox) {
     const parentDiv = checkbox.closest('.task-description');
-    const taskText = parentDiv.querySelector('.task__text');
+    const taskText = parentDiv.querySelector('.task-text');
     
     if(checkbox.checked) {
         taskText.classList.add('strikeout');
@@ -65,7 +65,7 @@ function strikeTask(checkbox) {
 
 function editTask(editButton) {
     const parentDiv = editButton.closest('.task');
-    const taskDescription = parentDiv.querySelector('.task__text');
+    const taskDescription = parentDiv.querySelector('.task-text');
     taskDescription.setAttribute('contentEditable', 'true');
 
     taskDescription.focus();
@@ -96,7 +96,7 @@ function saveUsername(username){
 }
 
 
-//Local storage data retreival functions
+
 function setUsernameFromLocalStorage() {
     if(localStorage.getItem('username')) {
         const savedUsername = localStorage.getItem('username');

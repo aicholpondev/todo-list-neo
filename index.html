@@ -10,21 +10,21 @@
   </head>
 
   <body>
-    <main>
-        <form id="todoForm">
-            <div class="greeting">
-                <p class="heading">What's up, </p>
-                <input class="username" placeholder="Name here">
+    <div class="todo_list">
+        <form id="todo-form">
+            <div class="todo-title">
+                <p class="todo-text">What's up, </p>
+                <input class="user" placeholder="Name here">
             </div>
 
             <div class="task-input">
-                <p class="uppercase">CREATE A TODO</p> 
+                <p class="task-title">CREATE A TODO</p> 
                 <p class="grey-txt">What's on your todo list?</p>
                 <input type="text" name="task" placeholder="e.g get a milk">
             </div>
             
             
-            <div class="category-selection">
+            <div class="category-general">
                 <p class="grey-txt">Pick a category</p>
                 <div class="category">
                     <div class="category-item">
@@ -39,11 +39,13 @@
             </div>
             <button class="submit" type="submit" id="submit">Add todo</button>
         </form>
-        <p class="uppercase">TODO LIST</p>
+        <p class="task-title">TODO LIST</p>
         <div class="tasks">
 
         </div>
-    </main>
+    </div>
+       
+    
 
     <script src="/js/main.js"></script>
     
