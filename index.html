@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/logo.webp">
+   
+  </head>
+
+  <body>
+    <main>
+        <form id="todoForm">
+            <div class="greeting">
+                <p class="heading">What's up, </p>
+                <input class="username" placeholder="Name here">
+            </div>
+
+            <div class="task-input">
+                <p class="uppercase">CREATE A TODO</p> 
+                <p class="grey-txt">What's on your todo list?</p>
+                <input type="text" name="task" placeholder="e.g get a milk">
+            </div>
+            
+            
+            <div class="category-selection">
+                <p class="grey-txt">Pick a category</p>
+                <div class="category">
+                    <div class="category-item">
+                        <input type="radio" class="business" name="category-option">
+                        <p>Business</p>
+                    </div>
+                    <div class="category-item">
+                        <input type="radio" class="personal" name="category-option">
+                        <p>Personal</p>
+                    </div>
+                </div>
+            </div>
+            <button class="submit" type="submit" id="submit">Add todo</button>
+        </form>
+        <p class="uppercase">TODO LIST</p>
+        <div class="tasks">
+
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    
+  </body>
